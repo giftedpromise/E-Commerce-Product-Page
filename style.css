@@ -225,6 +225,55 @@ main {
   text-decoration: line-through;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+.amount-btn {
+  background-color: var(--Light-grayish-blue);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  width: 35%;
+  border-radius: 7px;
+  justify-content: space-between;
+}
+.amount-btn button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.amount {
+  font-weight: 700;
+}
+.add_btn {
+  cursor: pointer;
+  width: 65%;
+  margin-left: 1rem;
+  background-color: var(--Orange);
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 7px;
+  padding: 1rem;
+}
+.add_btn:hover {
+  opacity: 70%;
+}
+.add_btn img {
+  filter: brightness(5);
+}
+
 @media screen and (max-width: 768px) {
   .hidden {
     display: flex;
