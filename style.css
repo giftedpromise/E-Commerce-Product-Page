@@ -156,23 +156,91 @@ nav {
   height: 200px;
 }
 
-@media screen and (max-width: 700px) {
-  /* visibility actions */
+main {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+  gap: 5rem;
+}
+
+.main-left,
+.main-right {
+  align-self: flex-start;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 3rem;
+}
+
+.text-heading {
+  font-size: 1rem;
+  color: var(--Orange);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.text-content {
+  color: var(--Dark--grayish--blue);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-price {
+  display: flex;
+  align-items: center;
+}
+
+.new-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.new-price span {
+  margin-left: 1rem;
+  background-color: var(--Pale--orange);
+  padding: 0.3rem;
+  border-radius: 6px;
+  color: var(--Orange);
+  font-weight: 700;
+}
+
+.old-amount {
+  color: var(--Grayish--blue);
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
   .hidden {
     display: flex;
   }
   .invisible-mob {
     display: none;
   }
-  /* default styles */
+
   body {
     position: relative;
   }
-  /* Navbar styles */
-  .nav_container {
+
+  .nav-container {
     padding-inline: 1rem;
   }
-  .nav_left-sec {
+  .nav-left-sec {
     align-items: center;
     gap: 1rem;
   }
@@ -193,7 +261,7 @@ nav {
     opacity: 75%;
     display: none;
   }
-  .nav_links {
+  .nav-links {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -208,19 +276,20 @@ nav {
     flex-direction: column;
     background-color: var(--White);
   }
-  .nav_link:hover::after {
+  .nav-link:hover::after {
     bottom: -15px;
   }
   .active {
     display: flex;
   }
-  .nav_link {
+  .nav-link {
     height: fit-content;
     font-weight: 700;
     color: var(--Black);
   }
-  .nav_right-sec {
+  .nav-right-sec {
     gap: 1.5rem;
+    margin-left: 5rem;
   }
   .avatar {
     width: 30px;
