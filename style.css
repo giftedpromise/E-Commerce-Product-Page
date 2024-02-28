@@ -92,3 +92,32 @@ nav {
   align-items: center;
   gap: 2rem;
 }
+
+.avatar,
+.cart {
+  cursor: pointer;
+}
+.avatar {
+  width: 50px;
+  margin: 1rem 0;
+}
+.avatar:hover {
+  outline: 2px solid var(--Orange);
+  border-radius: 50%;
+}
+.cart:hover {
+  filter: brightness(0%);
+}
+.cart-btn {
+  background-color: transparent;
+  border: none;
+}
+.indicator {
+  background-color: orange;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  color: var(--White);
+  position: absolute;
+  top: -15px;
+  right: -10px;
+}
