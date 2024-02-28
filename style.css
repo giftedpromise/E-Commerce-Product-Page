@@ -155,3 +155,74 @@ nav {
 .cart-content {
   height: 200px;
 }
+
+@media screen and (max-width: 700px) {
+  /* visibility actions */
+  .hidden {
+    display: flex;
+  }
+  .invisible-mob {
+    display: none;
+  }
+  /* default styles */
+  body {
+    position: relative;
+  }
+  /* Navbar styles */
+  .nav_container {
+    padding-inline: 1rem;
+  }
+  .nav_left-sec {
+    align-items: center;
+    gap: 1rem;
+  }
+  .menu {
+    cursor: pointer;
+  }
+  .close-btn {
+    cursor: pointer;
+  }
+  .overlay {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--Black);
+    opacity: 75%;
+    display: none;
+  }
+  .nav_links {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    z-index: 999;
+    gap: 2;
+    padding: 2rem;
+    align-items: flex-start;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+  }
+  .nav_link:hover::after {
+    bottom: -15px;
+  }
+  .active {
+    display: flex;
+  }
+  .nav_link {
+    height: fit-content;
+    font-weight: 700;
+    color: var(--Black);
+  }
+  .nav_right-sec {
+    gap: 1.5rem;
+  }
+  .avatar {
+    width: 30px;
+  }
+}
