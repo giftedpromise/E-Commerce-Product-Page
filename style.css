@@ -67,7 +67,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 2rem;
-  color: var(--Dark-grayish-blue);
+  color: var(--Dark--grayish--blue);
 }
 .nav-link {
   cursor: pointer;
@@ -90,7 +90,8 @@ nav {
 .nav-right-sec {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+  margin-left: 18rem;
 }
 
 .avatar,
