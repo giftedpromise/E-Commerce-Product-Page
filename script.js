@@ -7,6 +7,10 @@ const indicator = document.querySelector(".indicator");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 
+const thumbMob = document.querySelector(".thumb-mob");
+
+let currentImg = 1;
+
 const previewImages = document.querySelectorAll(".preview img");
 const mainThumbnailLightBox = document.querySelector(
   ".lightbox-container .main-thumbnail"
@@ -32,32 +36,22 @@ closeBtn.addEventListener(
   { passive: false }
 ); // Set passive option to false
 
-const imageSources = [
-  "./images/image-product-1.jpg",
-  "./images/image-product-2.jpg",
-  "./images/image-product-3.jpg",
-  "./images/image-product-4.jpg",
-];
-
-// Track the current image index
-let currentImageIndex = 0;
-
-// Function to update the image source based on the current index
-function updateImage() {
-  mainThumbnail.src = imageSources[currentImageIndex];
-}
-
-// Event listener for the next button
 nextButton.addEventListener("click", function () {
-  currentImageIndex = (currentImageIndex + 1) % imageSources.length;
-  updateImage();
+  if (currentImg == 4) {
+    currentImg = 1;
+  } else {
+    currentImg++;
+  }
+  thumbMob.src = `./images/image-product-${currentImg}.jpg`;
 });
 
-// Event listener for the previous button
 previousButton.addEventListener("click", function () {
-  currentImageIndex =
-    (currentImageIndex - 1 + imageSources.length) % imageSources.length;
-  updateImage();
+  if (currentImg == 1) {
+    currentImg = 4;
+  } else {
+    currentImg--;
+  }
+  thumbMob.src = `./images/image-product-${currentImg}.jpg`;
 });
 
 function openLightBox() {
