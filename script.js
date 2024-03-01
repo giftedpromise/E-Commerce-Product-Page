@@ -5,14 +5,13 @@ const overlay = document.querySelector(".overlay");
 const indicator = document.querySelector(".indicator");
 
 indicator.style.display = "none";
-function openMenu() {
+
+menuBtn.addEventListener("click", function () {
   menu.classList.add("active");
   overlay.classList.add("active");
-}
-function closeMenu() {
+});
+
+closeBtn.addEventListener("click", function () {
   menu.classList.remove("active");
   overlay.classList.remove("active");
-}
-
-menuBtn.addEventListener("click", openMenu);
-closeBtn.addEventListener("click", closeMenu);
+});
