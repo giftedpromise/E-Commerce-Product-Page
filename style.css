@@ -169,6 +169,24 @@ main {
 .main-right {
   align-self: flex-start;
 }
+.preview {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.preview img {
+  width: 90px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.preview img:hover {
+  opacity: 60%;
+}
+
+.selected {
+  border: 2px solid var(--Orange);
+  opacity: 50%;
+}
 
 .main-right {
   display: flex;
@@ -342,5 +360,62 @@ main {
   }
   .avatar {
     width: 30px;
+  }
+
+  main {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    margin-top: -1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .amount-btn {
+    width: 100%;
+  }
+  .add_btn {
+    width: 100%;
+    margin-left: 0;
+  }
+  #next {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    border: none;
+    background-color: var(--White);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  #previous {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    border: none;
+    background-color: var(--White);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  #previous img,
+  #next img {
+    width: 15px;
   }
 }
