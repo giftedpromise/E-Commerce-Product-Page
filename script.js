@@ -6,12 +6,20 @@ const indicator = document.querySelector(".indicator");
 
 indicator.style.display = "none";
 
-menuBtn.addEventListener("click", function () {
-  menu.classList.add("active");
-  overlay.classList.add("active");
-});
+menuBtn.addEventListener(
+  "click",
+  function () {
+    menu.classList.add("active");
+    overlay.classList.add("active");
+  },
+  { passive: false }
+); // Set passive option to false
 
-closeBtn.addEventListener("click", function () {
-  menu.classList.remove("active");
-  overlay.classList.remove("active");
-});
+closeBtn.addEventListener(
+  "click",
+  function () {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+  },
+  { passive: false }
+); // Set passive option to false
