@@ -32,6 +32,38 @@ closeBtn.addEventListener(
   { passive: false }
 ); // Set passive option to false
 
+const imageSources = [
+  "./images/image-product-1.jpg",
+  "./images/image-product-2.jpg",
+  "./images/image-product-3.jpg",
+  "./images/image-product-4.jpg",
+];
+
+// Track the current image index
+let currentImageIndex = 0;
+
+// Function to update the image source based on the current index
+function updateImage() {
+  mainThumbnail.src = imageSources[currentImageIndex];
+}
+
+// Event listener for the next button
+nextButton.addEventListener("click", function () {
+  currentImageIndex = (currentImageIndex + 1) % imageSources.length;
+  updateImage();
+});
+
+// Event listener for the previous button
+previousButton.addEventListener("click", function () {
+  currentImageIndex =
+    (currentImageIndex - 1 + imageSources.length) % imageSources.length;
+  updateImage();
+});
+
+function openLightBox() {
+  lightbox.classList.remove("invisible");
+}
+
 previewImages.forEach((previewImage) => {
   previewImage.addEventListener("click", () => {
     const lastImg = document.querySelectorAll(".selected");
