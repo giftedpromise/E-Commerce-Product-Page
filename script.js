@@ -106,6 +106,12 @@ addBtn.addEventListener("click", function () {
   }
 });
 
+function deleteItem() {
+  wrp.classList.add("empty");
+  wrp.innerHTML = `<p>Your cart is empty</p>`;
+  indicator.style.display = "none";
+}
+
 previewImages.forEach((previewImage) => {
   previewImage.addEventListener("click", () => {
     const lastImg = document.querySelectorAll(".selected");
