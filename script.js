@@ -12,7 +12,9 @@ const previousButton = document.getElementById("previous");
 const lightbox = document.querySelector(".lightbox");
 const cartBtn = document.querySelector(".cart-btn");
 const cart = document.querySelector(".cart-wrp");
+const wrp = document.querySelector(".cart-content");
 const closeLightboxBtn = document.querySelector(".close-lightbox");
+const addBtn = document.querySelector(".add-btn");
 
 const thumbMob = document.querySelector(".thumb-mob");
 let amountValue = 0;
@@ -84,6 +86,26 @@ function closeLightBox() {
   lightbox.classList.add("invisible");
 }
 
+addBtn.addEventListener("click", function () {
+  if (amountValue > 0) {
+    const total = 125.0 * amountValue;
+    wrp.classList.remove("empty");
+    wrp.innerHTML = `<div class="product">
+                    <div>
+                      <img src="./images/image-product-1-thumbnail.jpg" class="product-img" alt="product">
+                      <div class="product-info">
+                        <p class="product-title">Fall Limited Edition Sneakers</p>
+                       <p><span>$125.00</span> × <span class="number">${amountValue}</span> <b>$${total}</b></p>
+                      </div>
+                      <button class="delete-btn" onclick="deleteItem()"><img src="./images/icon-delete.svg" alt="delete"></button>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                  </div>`;
+    indicator.style.display = "block";
+    indicator.innerText = amountValue;
+  }
+});
+
 previewImages.forEach((previewImage) => {
   previewImage.addEventListener("click", () => {
     const lastImg = document.querySelectorAll(".selected");
@@ -115,3 +137,4 @@ previewImages.forEach((previewImage) => {
 
 cartBtn.addEventListener("click", toggleCart);
 mainThumbnail.addEventListener("click", openLightBox);
+closeLightboxBtn.addEventListener("click", closeLightBox);

@@ -275,7 +275,7 @@ main {
 .amount {
   font-weight: 700;
 }
-.add_btn {
+.add-btn {
   cursor: pointer;
   width: 65%;
   margin-left: 1rem;
@@ -291,10 +291,10 @@ main {
   border-radius: 7px;
   padding: 1rem;
 }
-.add_btn:hover {
+.add-btn:hover {
   opacity: 70%;
 }
-.add_btn img {
+.add-btn img {
   filter: brightness(5);
 }
 
@@ -457,7 +457,7 @@ main {
   .amount-btn {
     width: 100%;
   }
-  .add_btn {
+  .add-btn {
     width: 100%;
     margin-left: 0;
   }
