@@ -4,11 +4,13 @@ const menu = document.querySelector(".nav-links");
 const overlay = document.querySelector(".overlay");
 const mainThumbnail = document.querySelector(".main-thumbnail");
 const indicator = document.querySelector(".indicator");
+const plusBtn = document.getElementById("plus");
+const minusBtn = document.getElementById("minus");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 
 const thumbMob = document.querySelector(".thumb-mob");
-
+let amountValue = 0;
 let currentImg = 1;
 
 const previewImages = document.querySelectorAll(".preview img");
@@ -35,6 +37,11 @@ closeBtn.addEventListener(
   },
   { passive: false }
 ); // Set passive option to false
+
+plusBtn.addEventListener("click", function () {
+  amountValue++;
+  amount.innerText = amountValue;
+});
 
 nextButton.addEventListener("click", function () {
   if (currentImg == 4) {
