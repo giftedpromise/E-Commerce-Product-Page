@@ -504,6 +504,7 @@ main {
     align-items: center;
     gap: 1rem;
     width: 90%;
+    margin-bottom: 1rem;
   }
   .amount-btn {
     width: 100%;
