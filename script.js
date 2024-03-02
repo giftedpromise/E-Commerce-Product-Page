@@ -6,8 +6,13 @@ const mainThumbnail = document.querySelector(".main-thumbnail");
 const indicator = document.querySelector(".indicator");
 const plusBtn = document.getElementById("plus");
 const minusBtn = document.getElementById("minus");
+const amount = document.querySelector(".amount");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
+const lightbox = document.querySelector(".lightbox");
+const cartBtn = document.querySelector(".cart-btn");
+const cart = document.querySelector(".cart-wrp");
+const closeLightboxBtn = document.querySelector(".close-lightbox");
 
 const thumbMob = document.querySelector(".thumb-mob");
 let amountValue = 0;
@@ -43,6 +48,13 @@ plusBtn.addEventListener("click", function () {
   amount.innerText = amountValue;
 });
 
+minusBtn.addEventListener("click", function () {
+  if (amountValue > 0) {
+    amountValue--;
+  }
+  amount.innerText = amountValue;
+});
+
 nextButton.addEventListener("click", function () {
   if (currentImg == 4) {
     currentImg = 1;
@@ -63,6 +75,13 @@ previousButton.addEventListener("click", function () {
 
 function openLightBox() {
   lightbox.classList.remove("invisible");
+}
+
+function toggleCart() {
+  cart.classList.toggle("invisible");
+}
+function closeLightBox() {
+  lightbox.classList.add("invisible");
 }
 
 previewImages.forEach((previewImage) => {
@@ -94,4 +113,5 @@ previewImages.forEach((previewImage) => {
   });
 });
 
+cartBtn.addEventListener("click", toggleCart);
 mainThumbnail.addEventListener("click", openLightBox);
